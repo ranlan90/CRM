@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <div style="margin: 20px">
+        <h1>角色管理</h1>
+    {% load rbac %}
+    {% if request|has_permission:'rbac:role_add' %}
+            <a href="{% url "rbac:role_add" %}" class="btn btn-sm btn-success">添加</a>
+
+    {% endif %}
+        <table class="table table-bordered table-hover" style="margin-top: 5px">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>名称</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for role in all_roles %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ role.name }}</td>
+                    <td>
+                        {% if request|has_permission:'rbac:role_edit' %}
+                        <a href="{% url 'rbac:role_edit' role.id %}"><i class="fa fa-edit"></i></a>
+                        {% endif %}
+                        {% if request|has_permission:'rbac:role_del' %}
+                        <a href="{% url 'rbac:role_del' role.id %}"><i class="fa fa-trash-o"></i></a>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+
+    </div>
+{% endblock %}
