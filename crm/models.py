@@ -22,7 +22,7 @@ source_type = (('qq', "qq群"),
                ('office_direct', "直接上门"),
                ('WoM', "口碑"),
                ('public_class', "公开课"),
-               ('website_luffy', "路飞官网"),
+               ('website_luffy', "官网"),
                ('others', "其它"),)
 
 enroll_status_choices = (('signed', "已报名"),
