@@ -15,7 +15,8 @@
         <div class="panel-body">
         {% load rbac %}
         {% if request|has_permission:'add_customer' %}
-                    <a href="{% url 'add_customer' %}" class="btn btn-primary btn-sm">添加</a>
+{#                    <a href="{% url 'add_customer' %}" class="btn btn-primary btn-sm">添加</a>#}
+            {{ add_btn }}
         {% endif %}
 {#        <a href="{% url 'add_customer' %}" class="btn btn-primary btn-sm">添加</a>#}
 {#        {{ add_btn }}#}

@@ -67,5 +67,4 @@ urlpatterns = [
     # 展示学习记录
     url(r'study_record_list/(?P<course_id>\d+)/', teacher.study_record, name='study_record_list'),
 
-
 ]

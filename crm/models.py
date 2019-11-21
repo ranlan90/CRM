@@ -71,6 +71,7 @@ class Customer(models.Model):
     phone = models.BigIntegerField('手机号', blank=True, null=True)
     source = models.CharField('客户来源', max_length=64, choices=source_type, default='qq')
     introduce_from = models.ForeignKey('self', verbose_name="转介绍自学员", blank=True, null=True)
+    # 多选
     course = MultiSelectField("咨询课程", choices=course_choices)
     class_type = models.CharField("班级类型", max_length=64, choices=class_type_choices, default='fulltime')
     customer_note = models.TextField("客户备注", blank=True, null=True, )

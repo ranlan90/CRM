@@ -487,11 +487,7 @@ class PermissionForm(forms.ModelForm):
         model = models.Permission
         # fields = '__all__'
         fields = ['title','url','name','parent','menu']
-        widgets = {
-            'title': forms.widgets.Input(attrs={'class': 'form-control'}),
-            'weight': forms.widgets.Input(attrs={'class': 'form-control'}),
-            'icon': forms.widgets.RadioSelect(choices=ICON_LIST),
-        }
+
 
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs)

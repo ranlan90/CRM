@@ -80,10 +80,10 @@ class ConsultRecordForm(BaseForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        customer_choice = [(i.id, i)for i in self.instance.consultant.customers.all()]
-        customer_choice.insert(0, ('', '---------'))
-        # 限制客户是当前销售的私户
-        self.fields['customer'].widget.choices = customer_choice
+        # customer_choice = [(i.id, i)for i in self.instance.consultant.customers.all()]
+        # customer_choice.insert(0, ('', '---------'))
+        # # 限制客户是当前销售的私户
+        # self.fields['customer'].widget.choices = customer_choice
         # 限制跟进人是当前的用户（销售）
         self.fields['consultant'].widget.choices = [(self.instance.consultant.id, self.instance.consultant),]
 

@@ -84,7 +84,8 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': 3306,
         'USER': 'root',
-        'PASSWORD': '********',
+        # 密码需要改成自己数据库的密码
+        'PASSWORD': '*****',
 
     }
 }
