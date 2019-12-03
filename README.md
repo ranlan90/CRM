@@ -98,7 +98,7 @@ pip3 install PyMySQL
 # 效果图
 ## 登录页面
 
-项目网址:  [http://crm.yueqi.cf/login/](http://crm.yueqi.cf/login/)
+项目网址:  [http://crm.yueqi.cf:8880/login/](http://crm.yueqi.cf:8880/login/)
 
 用户名：hanhan@qq.com 密码：123456
 
